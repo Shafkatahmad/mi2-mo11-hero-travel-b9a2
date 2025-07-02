@@ -32,9 +32,6 @@ body {
   display: flex;
 }
 /* header styles */
-header {
-  border: 2px solid red;
-}
 .navbar {
   justify-content: space-between;
   align-items: center;
@@ -60,22 +57,26 @@ header {
   background-image: linear-gradient(180deg,rgba(19, 19, 24, 1),rgba(19, 19, 24, 0)),url(../Images/Group\ 13\ \(1\)\ \(1\).png);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 105px;
+  margin-top: 50px;
 }
 .banner-text {
   max-width: 670px;
   text-align: center;
 }
 .banner-input {
-  width: 800px;
+  max-width: 800px;
   border-radius: 0.5rem;
   background: rgba(225, 225, 225, 0.2);
   padding: 1rem;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   align-items: center;
   backdrop-filter: blur(4px);
 }
@@ -86,4 +87,20 @@ input, select, button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+/* responsive media query */
+@media screen and (max-width: 576px) {
+  .navbar, .nav-links{
+    flex-direction: column;
+  }
+  .banner-input {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992) {
+  .banner-input {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
