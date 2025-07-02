@@ -7,9 +7,13 @@ body {
   max-width: 1300px;
   margin: 100px auto;
 }
+body section {
+  margin-top: 100px;
+}
 .title {
   font-size: 2.5rem;
   font-weight: 800;
+  margin-top: 24px;
 }
 .card-title {
   font-size: 1.5rem;
@@ -17,6 +21,7 @@ body {
 }
 .description-font-color {
   color: rgba(90, 90, 93, 1);
+  margin-top: 16px;
 }
 #orange-text {
   color: rgba(255, 84, 0, 1);
@@ -88,14 +93,25 @@ input, select, button {
   border-radius: 8px;
   cursor: pointer;
 }
+/* popular tours styles */
+.popular-tours {
+  border: 2px solid red;
+  gap: 50px;
+}
+.popular-tours-btn {
+  margin-top: 32px;
+}
 /* responsive media query */
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links{
+  .navbar, .nav-links, .popular-tours{
     flex-direction: column;
   }
   .banner-input {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .popular-tours img {
+    width: 100%;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 992) {
