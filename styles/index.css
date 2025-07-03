@@ -2,7 +2,7 @@
 * {
   margin: 0;
 }
-body {
+header, main {
   font-family: "Mulish", sans-serif;
   max-width: 1300px;
   margin: 100px auto;
@@ -219,6 +219,34 @@ input, select, button {
 }
 .card-title {
   font-size: 1.75rem;
+}
+/* footer styles */
+.footer-container {
+  max-width: 100vw;
+  background-color: rgba(19, 19, 24, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer {
+  max-width: 760px;
+  margin: 110px 0px;
+}
+.footer-title {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.footer-description {
+  margin-bottom: 30px;
+}
+footer a {
+  margin-right: 2rem;
+  color: black;
+}
+footer hr {
+  margin: 3rem 0;
 }
 /* responsive media query */
 @media screen and (max-width: 576px) {
